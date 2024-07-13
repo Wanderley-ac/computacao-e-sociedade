@@ -12,29 +12,26 @@ import java.util.Scanner;
  */
 
 public class Aula03 {
-    public static void main(String args[]){
-        Scanner entrada = new Scanner(System.in);
- int repeticoes = 0;
- String nome;
- int idade;
- String sexo;
- while (true) {
- System.out.print("Digite o nome da pessoa (ou '0' para encerrar): ");
- nome=entrada.nextLine();
- if (nome.equals("0")) {
-     break;
- }
- System.out.print("Digite a idade da pessoa: ");
- idade=entrada.nextInt();
- if (idade == 0) {
-     break; 
- }
-  System.out.print("Digite o sexo da pessoa: ");
-  sexo=entrada.nextLine();
-   if (sexo.equals("0")) {
-  repeticoes++; 
- }
-  System.out.println("O algoritmo foi repetido " + repeticoes + " vezes.");
-}
-}
-}
+   public static void main(String args[]) {
+        Scanner input = new Scanner(System.in);
+        int repeticoes = 0;
+        String nome;
+        int idade;
+        char sexo;
+        while (true) {
+            System.out.print("Digite o nome da pessoa: ): ");
+            nome = input.nextLine();
+           
+            
+            System.out.print("Digite a idade da pessoa (ou '0' para encerrar: ");
+            idade = Integer.parseInt(input.nextLine());
+            if (idade == 0) {
+                break;
+            }
+            System.out.print("Digite o sexo da pessoa (M/f): ");
+            sexo = input.nextLine().charAt(0);
+            repeticoes++;
+         }
+          System.out.println("O algoritmo foi repetido " + repeticoes + " vezes.");
+        }
+    }
